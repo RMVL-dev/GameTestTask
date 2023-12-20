@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gameScene">
+
+    <fragment
+        android:id="@+id/mainView"
+        android:name="com.example.gametesttask.presenatation.menuview.MainView"
+        android:label="fragment_main_view"
+        tools:layout="@layout/fragment_main_view" >
+        <action
+            android:id="@+id/action_mainView_to_gameScene"
+            app:destination="@id/gameScene" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameScene"
+        android:name="com.example.gametesttask.presenatation.gamescene.GameScene"
+        android:label="fragment_game_scene"
+        tools:layout="@layout/fragment_game_scene" >
+        <action
+            android:id="@+id/action_gameScene_to_endGamePopup"
+            app:destination="@id/endGamePopup" />
+    </fragment>
+    <fragment
+        android:id="@+id/endGamePopup"
+        android:name="com.example.gametesttask.presenatation.endgamepopup.EndGamePopup"
+        android:label="fragment_end_game_popup"
+        tools:layout="@layout/fragment_end_game_popup" />
+</navigation>
